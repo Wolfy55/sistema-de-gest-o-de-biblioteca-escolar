@@ -23,7 +23,7 @@ def relatorio_emprestimos_ativos():
     for emp in emprestimos.emprestimos:
         if emp['ativo']:
             print("-", titulo_do_livro(emp['codigo_livro']),
-                  "| leitor:", nome_do_leitor(emp['id_leitor']))
+                "| leitor:", nome_do_leitor(emp['id_leitor']))
             encontrou = True
     if not encontrou:
         print("Nenhum empréstimo ativo.")
@@ -35,7 +35,7 @@ def relatorio_devolucoes():
     for emp in emprestimos.emprestimos:
         if not emp['ativo']:
             print("-", titulo_do_livro(emp['codigo_livro']),
-                  "| leitor:", nome_do_leitor(emp['id_leitor']))
+                "| leitor:", nome_do_leitor(emp['id_leitor']))
             encontrou = True
     if not encontrou:
         print("Nenhuma devolução registrada.")
